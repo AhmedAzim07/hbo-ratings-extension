@@ -10,9 +10,12 @@
 */
 
 #hr-pill {
-  /* Pill shape */
+  /* Pill shape — shrink-to-content, not stretched by HBO's flex-column parent */
   display: inline-flex !important;
   align-items: center !important;
+  align-self: flex-start !important;
+  justify-self: start !important;
+  width: fit-content !important;
   gap: 9px !important;
   border-radius: 999px !important;
   padding: 8px 18px !important;
