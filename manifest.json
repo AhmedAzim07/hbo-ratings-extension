@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "HBO Ratings Overlay",
+  "version": "1.0",
+  "description": "Shows IMDb and Rotten Tomatoes scores directly on HBO Max title pages.",
+  "content_scripts": [
+    {
+      "matches": ["*://play.hbomax.com/*", "*://play.max.com/*"],
+      "js": ["config.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://www.omdbapi.com/*"
+  ]
+}

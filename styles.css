@@ -1,0 +1,76 @@
+/* ============================================================
+   HBO Ratings Overlay — styles.css v1
+   Pill injected into the hero section's action-row gap
+   ============================================================ */
+
+/*
+  The pill sits in normal document flow, directly after the
+  My List / Rate / Trailer row and before the episode heading —
+  the circled empty space in the reference screenshot.
+*/
+
+#hr-pill {
+  /* Pill shape */
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  border-radius: 999px !important;
+  padding: 8px 18px !important;
+
+  /* Frosted glass — translucent dark, same look as the Netflix build */
+  background: rgba(10, 10, 10, 0.55) !important;
+  backdrop-filter: blur(20px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.45) !important;
+
+  /* Spacing from surrounding content */
+  margin: 14px 0 10px 0 !important;
+
+  /* Typography */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  color: #fff !important;
+  white-space: nowrap !important;
+  max-width: 320px !important;
+  overflow: hidden !important;
+
+  /* Don't steal clicks from the page */
+  pointer-events: none !important;
+
+  /* Stack above HBO Max's content */
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+#hr-pill.hr-loading {
+  opacity: 0.55 !important;
+}
+
+/* Title name — slightly muted, truncated */
+.hr-pname {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  letter-spacing: 0.03em !important;
+  max-width: 140px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  text-transform: none !important;
+}
+
+/* Separator dots */
+.hr-pdot {
+  font-size: 10px !important;
+  color: rgba(255, 255, 255, 0.28) !important;
+  flex-shrink: 0 !important;
+}
+
+/* Rating scores — bold and bright */
+.hr-pscore {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  flex-shrink: 0 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+}
